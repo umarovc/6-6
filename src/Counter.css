@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  --bg-canvas: #F6F3EC;
+  --ink-dark: #121316;
+  --surface-card: #FFFFFF;
+  --screen-bg: #16181D;
+  --accent-amber: #FFB800;
+  --signal-emerald: #00C853;
+  --stamp-vermilion: #FF334B;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.counter-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-canvas);
+  background-image: 
+    linear-gradient(to right, rgba(18, 19, 22, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(18, 19, 22, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 20px;
+}
+
+.counter-device {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--surface-card);
+  border: 3px solid var(--ink-dark);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 0 var(--ink-dark), 0 20px 35px rgba(18, 19, 22, 0.14);
+}
+
+.device-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed rgba(18, 19, 22, 0.15);
+}
+
+.device-brand {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--ink-dark);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--bg-canvas);
+  border: 1.5px solid var(--ink-dark);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-dark);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--signal-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--signal-emerald);
+}
+
+.display-screen {
+  background-color: var(--screen-bg);
+  border: 3px solid var(--ink-dark);
+  border-radius: 14px;
+  padding: 24px 20px;
+  text-align: center;
+  margin-bottom: 22px;
+  box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+.display-label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #8A909E;
+  margin-bottom: 8px;
+}
+
+.display-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--bg-canvas);
+  margin: 8px 0 12px;
+}
+
+.limit-alert {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 12px;
+  background-color: rgba(255, 184, 0, 0.15);
+  border: 1px solid var(--accent-amber);
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-amber);
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.tactile-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 10px;
+  border: 2.5px solid var(--ink-dark);
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 var(--ink-dark);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  user-select: none;
+}
+
+.tactile-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--ink-dark);
+}
+
+.btn-symbol {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.btn-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+  opacity: 0.85;
+}
+
+.btn-minus {
+  background-color: #FFE8EC;
+  color: var(--ink-dark);
+}
+
+.btn-minus:hover {
+  background-color: var(--stamp-vermilion);
+  color: #FFFFFF;
+}
+
+.btn-reset {
+  background-color: var(--bg-canvas);
+  color: var(--ink-dark);
+}
+
+.btn-reset:hover {
+  background-color: var(--accent-amber);
+}
+
+.btn-plus {
+  background-color: #E3FCEF;
+  color: var(--ink-dark);
+}
+
+.btn-plus:hover {
+  background-color: var(--signal-emerald);
+  color: var(--ink-dark);
+}
+
+.device-footer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #686E7A;
+}
